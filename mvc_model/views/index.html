@@ -156,4 +156,13 @@ function LoopTest() {
   .catch(error => console.error('Error:', error));
 }
 </script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+  let socket = io();
+
+  socket.on('number', (msg) => {
+    console.log('Random number:', msg);
+  });
+</script>
 </html>
